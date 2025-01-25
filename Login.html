@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Website - Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <style>
+
+    .login-container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .login-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2575fc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .btn-login {
+      background-color: #2575fc;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .btn-login:hover {
+      background-color: #1a5cc8;
+    }
+
+      .login-container {
+    width: 100%;
+    max-width: 20000000000px;
+    min-height: 720px;
+    height: 1vmax;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .login-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn-login {
+    width: 100%;
+  }
+  .form-text {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .form-text a {
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  .form-text a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+
+  .hero {
+    background-color: #0d6efd;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+  .logout-btn {
+    color: white;
+    text-decoration: none;
+  }
+  .logout-btn:hover {
+    text-decoration: underline;
+  }
+
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+ 
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .navbar {
+      background-color: #000000;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ce310a !important; /* Change color on hover */
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-size: 1.5rem;
+    }
+
+    .navbar-brand:hover {
+      color: #bb2b1b !important; /* Change color on hover */
+    }
+    
+    .navbar {
+      margin-bottom: 10px;
+    }
+    .logout-btn {
+      color: white;
+      text-decoration: none;
+    }
+    .logout-btn:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Footer styling */
+    footer {
+      background-color: #080808; /* Dark background */
+      color: white;
+      text-align: center;
+      padding: 1px 0px;
+      position: relative;
+    }
+
+    footer .social-icons {
+      margin: 10px 0;
+    }
+
+    footer .social-icons a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #e20b0be3; /* Highlight color */
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .bg-text {
+        width: 90%;
+        font-size: 16px;
+      }
+      footer p {
+        font-size: 12px;
+      }
+    }
+</style>
+
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="Index.html">Student Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Student.html">Student</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Login.html">Login</a>
+          </li>
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="logoutButton">Logout</button>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>
+
+<body>
+  
+<div class="login-container">
+  <h3>Student Login</h3>
+  <form id="loginForm">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+    </div>
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="rememberMe">
+      <label class="form-check-label" for="rememberMe">Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary btn-login">Login</button>
+  
+  </form>
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Login form validation
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    // Simple validation
+    if (username === "" || password === "") {
+      alert("Please fill out both fields.");
+      return;
+    }
+
+    // Mock authentication
+    if (username === "admin@123.com" && password === "admin@123") {
+      alert("Login successful!");
+      window.location.href = "Index.html"; // Redirect to a dashboard page
+    } else {
+      alert("Invalid username or password.");
+    }
+  });
+</script>
+
+<script>
+
+    // Logout functionality
+    document.getElementById("logoutButton").addEventListener("click", function() {
+      alert("You have been logged out.");
+      // Redirect the user to the login page
+      window.location.href = "login.html"; // Update with the actual path to your login page
+    });
+  </script>
+
+  
+<!-- Footer Section -->
+<footer>
+  <div class="social-icons">
+    <a href="#" aria-label="Facebook">Facebook</a> |
+    <a href="#" aria-label="Twitter">Twitter</a> |
+    <a href="#" aria-label="Instagram">Instagram</a>
+  </div>
+  <p>&copy; 2025 Your Website. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
